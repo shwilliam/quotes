@@ -82,3 +82,27 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+
+function update_post_per_page( $args, $request ) {
+    $max = max( (int) $request->get_param( 'custom_per_page' ), 9999 );
+    $args['posts_per_page'] = $max;    
+    return $args;
+}
+
+add_filter( 'rest_post_query', 'update_post_per_page', 10, 2 );
+
+function quotes_scripts() {
+  $script_url = get_template_directory_uri() . '/scripts.js';
+  wp_enqueue_script( 'jquery' );
+  wp_enqueue_script( 'quotes_vars', $script_url, array( 'jquery' ), false, true );
+  wp_localize_script( 'quotes_vars', 'wp_vars', array(
+    'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
+    'rest_url' => esc_url_raw( rest_url() ) . 'wp/v2/',
+    'post_id' => get_the_ID(),
+    'posts_amount' => wp_count_posts()->publish 
+  ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'quotes_scripts' );
+
