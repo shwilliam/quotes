@@ -1,0 +1,32 @@
+{
+  "name": "quotes",
+  "version": "0.1.0",
+  "description": "Another WP theme",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^4.0.2",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-terser": "^1.1.5"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shwilliam/quotes.git"
+  },
+  "author": "William L <w-lindvall@outlook.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/shwilliam/quotes/issues"
+  },
+  "homepage": "https://github.com/shwilliam/quotes#readme"
+}
