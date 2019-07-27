@@ -446,18 +446,18 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Links */
 a {
-  color: royalblue; }
+  color: #00cc00; }
   a:visited {
-    color: purple; }
+    color: lime; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #009900; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
