@@ -1,31 +1,25 @@
 /* global wp_vars */
 
 jQuery(() => {
-  jQuery.ajax({
-    url: `${wp_vars.rest_url}posts`, 
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce)
-    }
-  }).success(res => {
-    const posts = res 
-    const randIndex = getRandIndex()
+  // fetch initial quote
+  fetchRandomQuote()
 
-    // initial post
-    console.log(posts[randIndex], randIndex)
-    // TODO: show in dom 
-
-    jQuery('#btn-fetch-quote').on('click', e => {
-      e.preventDefault()
-      const nextRandIndex = getRandIndex()
-
-      // next post
-      console.log(posts[nextRandIndex])
-      // TODO: replace prev post
-      
-    })
-  }).fail(err => console.error(err)) // TODO: show err
+  jQuery('#btn-fetch-quote').on('click', e => {
+    e.preventDefault()
+    fetchRandomQuote()
+  })
 })
 
-function getRandIndex() {
-  return Math.floor(Math.random() * wp_vars.posts_amount)
+function fetchRandomQuote() {
+  return jQuery
+    .ajax({
+      url: `${wp_vars.rest_url}posts?filter[orderby]=rand&filter[posts_per_page]=1`,
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce)
+      },
+    })
+    .success(res => {
+      console.log(res) // TODO: show in dom
+    })
+    .fail(err => console.error(err)) // TODO: show err
 }
