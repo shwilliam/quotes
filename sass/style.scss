@@ -1,42 +1,29 @@
 /*!
 Theme Name: quotes
 Theme URI: https://github.com/shwilliam/quotes
+Text Domain: quotes
 Author: William L <w-lindvall@outlook.com>
 Author URI: https://github.com/shwilliam
 Description: Another WP theme
 Version: 0.1.0
 License: GNU General Public License v2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Variables
+# WordPress Core
 # Normalize
 # Fonts
 # Typography
-# Elements
-# Forms
-# Navigation
-# Accessibility
-# Alignments
-# Clearings
-# Content
-# Media
-# Page Templates
 --------------------------------------------------------------*/
 
-@import "variables";
-@import "mixins";
+@import 'variables';
 
-@import "normalize";
-@import "fonts";
-@import "typography";
-@import "elements";
-@import "forms";
-@import "navigation";
-@import "modules";
-@import "content";
-@import "media";
-@import "page-templates";
+@import 'wp-core';
+
+@import 'normalize';
+@import 'fonts';
+@import 'typography';
