@@ -1,8 +1,11 @@
 /**
  * Skip link
  */
-(function() {
-  const isWebkit = navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
+
+;(function() {
+  // eslint-disable-line
+  const isWebkit =
+      navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
     isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,
     isIE = navigator.userAgent.toLowerCase().indexOf('msie') > -1
 
@@ -24,14 +27,18 @@
         element = document.getElementById(id)
 
         if (element) {
-          if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+          if (
+            !/^(?:a|select|input|button|textarea)$/i.test(
+              element.tagName,
+            )
+          ) {
             element.tabIndex = -1
           }
 
           element.focus()
         }
       },
-      false
+      false,
     )
   }
 })()
