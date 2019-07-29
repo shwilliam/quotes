@@ -16,14 +16,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 # Normalize
 # Variables
 # WordPress Core
-# Site
 # Fonts
 # Typography
+# Blocks
+  # Site
+  # Header
+  # Footer
 --------------------------------------------------------------*/
 
 @import 'normalize';
 @import 'variables';
 @import 'wp-core';
-@import 'site';
 @import 'fonts';
 @import 'typography';
+
+@import 'blocks/site';
+@import 'blocks/header';
+@import 'blocks/footer';

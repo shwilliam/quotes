@@ -11,14 +11,14 @@ const terser = require('gulp-terser')
 
 gulp.task('sass', function() {
   return gulp
-    .src('./sass/style.scss', { sourcemaps: true })
+    .src('./sass/style.scss', {sourcemaps: true})
     .pipe(sourcemaps.init())
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
       autoprefixer({
-        browsers: ['last 2 versions']
-      })
+        browsers: ['last 2 versions'],
+      }),
     )
     .pipe(gulp.dest('./'))
     .pipe(cssnano())
@@ -44,11 +44,11 @@ gulp.task(
       .pipe(terser())
       .pipe(
         rename({
-          extname: '.min.js'
-        })
+          extname: '.min.js',
+        }),
       )
       .pipe(gulp.dest('./build/js'))
-  })
+  }),
 )
 
 gulp.task('browser-sync', function() {
@@ -56,19 +56,19 @@ gulp.task('browser-sync', function() {
     './build/css/*.css',
     './build/js/*.js',
     './*.php',
-    './**/*.php'
+    './**/*.php',
   ]
 
   browserSync.init(files, {
-    proxy: 'localhost/quotes-on-dev'
+    proxy: 'localhost/quotes-on-dev',
   })
 
   gulp.watch(files).on('change', browserSync.reload)
 })
 
 gulp.task('watch', function() {
-  gulp.watch('js/*.js', gulp.series('scripts'))
-  gulp.watch('sass/*.scss', gulp.series('sass'))
+  gulp.watch('js/**/*', gulp.series('scripts'))
+  gulp.watch('sass/**/*', gulp.series('sass'))
 })
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'))
