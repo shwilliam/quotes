@@ -22,8 +22,14 @@
       </nav>
 
       <p>
-        Made with 💚 by
-        <a href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
+        Made with
+          <span role="img" aria-label="Heart">💚</span>
+        by
+        <a
+          href="https://github.com/shwilliam"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           @shwilliam
         </a>
       </p>
