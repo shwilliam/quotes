@@ -1,13 +1,13 @@
 <?php
 /**
- * Quote template
+ * Single quote
  *
  * @package quotes
  */
 
 ?>
 
-<blockquote <?php post_class('quote quote--bordered'); ?>>
+<blockquote id="quote-active" <?php post_class('quote'); ?>>
 
   <p><?php the_content(); ?><p>
   <footer>— <?php the_title(); ?></footer>

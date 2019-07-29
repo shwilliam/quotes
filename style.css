@@ -23,6 +23,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   # Footer
   # Button
   # List
+  # Quote
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize (v8.0.1)
@@ -549,3 +550,11 @@ body {
 
 .list--inline-padded li:not(:last-child) {
   padding-right: 0.5rem; }
+
+/*--------------------------------------------------------------
+# Quote
+--------------------------------------------------------------*/
+.quote--bordered {
+  border-top: 1px dotted #fff; }
+  .quote--bordered:last-of-type {
+    border-bottom: 1px dotted #fff; }

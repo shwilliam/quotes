@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------
+# Quote
+--------------------------------------------------------------*/
+
+.quote--bordered {
+  border-top: 1px dotted $color__text;
+
+  &:last-of-type {
+    border-bottom: 1px dotted $color__text;
+  }
+}

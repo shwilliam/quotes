@@ -7,27 +7,23 @@
 
 get_header(); ?>
 
-  <main> 
+  <?php
+    global $post;
 
-    <?php
-      global $post;
+    $post = get_posts(array(
+      'posts_per_page' => 1,
+      'orderby'        => 'rand',
+    ))[0];
 
-      $post = get_posts(array(
-        'posts_per_page' => 1,
-        'orderby'        => 'rand',
-      ))[0];
+    setup_postdata($post);
 
-      setup_postdata($post);
+      get_template_part('template-parts/content', 'quote--single');
 
-        get_template_part('template-parts/content', 'quote');
+    wp_reset_postdata();
+  ?>
 
-      wp_reset_postdata();
-    ?>
-
-    <button id="btn-fetch-quote" class="button">
-      Show me another!
-    </button>
-
-  </main>
+  <button id="btn-fetch-quote" class="button">
+    Show me another!
+  </button>
 
 <?php get_footer(); ?>
