@@ -18,7 +18,7 @@ get_header(); ?>
     <section>
       <h3>Quote Authors</h3>
 
-      <ul>
+      <ul class="list list--inline list--inline-padded">
         <?php
           $posts = get_posts(array(
             'posts_per_page' => -1, // fetch all
@@ -41,7 +41,7 @@ get_header(); ?>
     <section>
       <h3>Categories</h3>
 
-      <ul>
+      <ul class="list list--inline list--inline-padded">
         <?=
           wp_list_categories(array(
             'title_li' => '',
@@ -54,7 +54,7 @@ get_header(); ?>
       <section>
         <h3>Tags</h3>
 
-        <ul>
+        <ul class="list list--inline list--inline-padded">
           <?php foreach ($tags as $tag) : ?>
 
             <li>

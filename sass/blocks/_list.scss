@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# List
+--------------------------------------------------------------*/
+
+.list {
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    margin-left: 0;
+    list-style: none;
+  }
+}
+
+.list--inline {
+  li {
+    display: inline-block;
+  }
+}
+
+.list--inline-padded {
+  li:not(:last-child) {
+    padding-right: $rhythm__base/3;
+  }
+}

@@ -5,13 +5,13 @@
 .footer__nav {
   li {
     line-height: 1.2;
-    padding: 0 $rhythm__base;
 
-    &:first-child {
-      padding-left: 0;
+    &:not(:first-child) {
+      padding-left: $rhythm__base;
     }
 
     &:not(:last-child) {
+      padding-right: $rhythm__base;
       border-right: 1px solid $color__text;
     }
   }

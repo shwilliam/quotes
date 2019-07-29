@@ -22,6 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   # Header
   # Footer
   # Button
+  # List
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize (v8.0.1)
@@ -349,16 +350,6 @@ h6,
 p {
   margin: 0; }
 
-ul,
-ol {
-  padding-left: 0;
-  margin: 0; }
-  ul li,
-  ol li {
-    margin-left: 0;
-    display: inline-block;
-    list-style: none; }
-
 blockquote {
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -522,11 +513,11 @@ body {
 # Footer
 --------------------------------------------------------------*/
 .footer__nav li {
-  line-height: 1.2;
-  padding: 0 1.5rem; }
-  .footer__nav li:first-child {
-    padding-left: 0; }
+  line-height: 1.2; }
+  .footer__nav li:not(:first-child) {
+    padding-left: 1.5rem; }
   .footer__nav li:not(:last-child) {
+    padding-right: 1.5rem;
     border-right: 1px solid #fff; }
 
 /*--------------------------------------------------------------
@@ -542,3 +533,19 @@ body {
   .button:hover, .button:active {
     color: #009900;
     border: 2px solid #009900; }
+
+/*--------------------------------------------------------------
+# List
+--------------------------------------------------------------*/
+.list {
+  padding-left: 0;
+  margin: 0; }
+  .list li {
+    margin-left: 0;
+    list-style: none; }
+
+.list--inline li {
+  display: inline-block; }
+
+.list--inline-padded li:not(:last-child) {
+  padding-right: 0.5rem; }

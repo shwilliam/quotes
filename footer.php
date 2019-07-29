@@ -16,7 +16,7 @@
           'theme_location' => 'primary', 
           'menu_id' => 'menu--primary',
           'container_class' => 'footer__nav-wrapper',
-          'menu_class' => 'footer__nav',
+          'menu_class' => 'list list--inline footer__nav',
         )); ?>
 
       </nav>
