@@ -1,0 +1,72 @@
+<?php
+/**
+ * Custom archives page
+ *
+ * @package quotes
+ */
+
+get_header(); ?>
+
+  <!-- TODO: handle empty lists -->
+
+  <main> 
+
+    <h2>
+      <?= the_title(); ?>
+    </h2>
+
+    <section>
+      <h3>Quote Authors</h3>
+
+      <ul>
+        <?php
+          $posts = get_posts(array(
+            'posts_per_page' => -1, // fetch all
+          ));
+          foreach ($posts as $post) : setup_postdata($post);
+        ?>
+
+          <li>
+            <a href="<?= esc_url(get_permalink()); ?>">
+              <?= the_title(); ?>
+            </a>
+          </li>
+
+        <?php
+          endforeach; wp_reset_postdata();
+        ?>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Categories</h3>
+
+      <ul>
+        <?=
+          wp_list_categories(array(
+            'title_li' => '',
+          ));
+        ?>
+      </ul>
+    </section>
+
+    <?php $tags = get_tags(); if ($tags) : ?>
+      <section>
+        <h3>Tags</h3>
+
+        <ul>
+          <?php foreach ($tags as $tag) : ?>
+
+            <li>
+              <a href="<?= esc_url(get_tag_link($tag->term_id)); ?>">
+                <?= $tag->name; ?>
+              </a>
+            </li>
+
+          <?php endforeach; ?>
+        </ul>
+      </section>
+    <?php endif; ?>
+  </main>
+
+<?php get_footer(); ?>

@@ -348,6 +348,16 @@ h6,
 p {
   margin: 0; }
 
+ul,
+ol {
+  padding-left: 0;
+  margin: 0; }
+  ul li,
+  ol li {
+    margin-left: 0;
+    display: inline-block;
+    list-style: none; }
+
 blockquote {
   -webkit-margin-before: 0;
           margin-block-start: 0;
@@ -510,15 +520,10 @@ body {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.footer__nav {
-  padding-left: 0;
-  margin: 0; }
-  .footer__nav li {
-    margin-left: 0;
-    display: inline-block;
-    line-height: 1.2;
-    padding: 0 1.5rem; }
-    .footer__nav li:first-child {
-      padding-left: 0; }
-    .footer__nav li:not(:last-child) {
-      border-right: 1px solid #fff; }
+.footer__nav li {
+  line-height: 1.2;
+  padding: 0 1.5rem; }
+  .footer__nav li:first-child {
+    padding-left: 0; }
+  .footer__nav li:not(:last-child) {
+    border-right: 1px solid #fff; }

@@ -370,6 +370,18 @@ p {
   margin: 0;
 }
 
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+
+  li {
+    margin-left: 0;
+    display: inline-block;
+    list-style: none;
+  }
+}
+
 blockquote {
   margin-block-start: 0;
   margin-block-end: 0;
