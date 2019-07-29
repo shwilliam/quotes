@@ -24,7 +24,9 @@ get_header(); ?>
       wp_reset_postdata();
     ?>
 
-    <button id="btn-fetch-quote">Show me another!</button>
+    <button id="btn-fetch-quote" class="button">
+      Show me another!
+    </button>
 
   </main>
 

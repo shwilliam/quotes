@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+
+.button {
+  padding: $rhythm__base/3 $rhythm__base * 1.5;
+  background-color: transparent;
+  color: $color__link;
+  border: 2px solid $color__link;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    color: $color__link--hover;
+    border: 2px solid $color__link--hover;
+  }
+}
