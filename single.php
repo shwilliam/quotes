@@ -1,24 +1,20 @@
 <?php
 /**
- * Single post
+ * Single quote
  *
  * @package quotes
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+  while ( have_posts() ) : the_post();
 
-		<?php while ( have_posts() ) : the_post(); ?>
+    get_template_part( 'template-parts/content', 'quote--single' );
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+  endwhile; ?>
 
-			<?php the_post_navigation(); ?>
-
-		<?php endwhile; ?>
-
-		</main>
-	</div>
+  <button id="btn-fetch-quote" class="button">
+    Show me another!
+  </button>
 
 <?php get_footer(); ?>
