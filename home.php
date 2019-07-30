@@ -22,7 +22,7 @@ get_header(); ?>
     wp_reset_postdata();
   ?>
 
-  <button id="btn-fetch-quote" class="button">
+  <button id="quote__fetch-btn" class="button">
     Show me another!
   </button>
 

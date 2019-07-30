@@ -13,7 +13,7 @@ get_header();
 
   endwhile; ?>
 
-  <button id="btn-fetch-quote" class="button">
+  <button id="quote__fetch-btn" class="button">
     Show me another!
   </button>
 
