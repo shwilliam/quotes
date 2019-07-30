@@ -557,6 +557,12 @@ body {
     color: #009900;
     border: 2px solid #009900; }
 
+.button--icon, .button--icon:hover, .button--icon:active {
+  color: #00cc00;
+  border: none;
+  line-height: 1;
+  padding: 0 0.5rem; }
+
 /*--------------------------------------------------------------
 # List
 --------------------------------------------------------------*/

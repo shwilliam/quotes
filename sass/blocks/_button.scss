@@ -14,3 +14,14 @@
     border: 2px solid $color__link--hover;
   }
 }
+
+.button--icon {
+  &,
+  &:hover,
+  &:active {
+    color: $color__link;
+    border: none;
+    line-height: 1;
+    padding: 0 $rhythm__base/3;
+  }
+}
