@@ -13,29 +13,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# WordPress Core
 # Normalize
 # Variables
-# WordPress Core
+# Mixins
 # Fonts
 # Typography
 # Blocks
   # Site
   # Header
   # Footer
+  # Form
   # Button
   # List
   # Quote
 --------------------------------------------------------------*/
 
+@import 'wp-core';
 @import 'normalize';
 @import 'variables';
-@import 'wp-core';
+@import 'mixins';
 @import 'fonts';
 @import 'typography';
 
 @import 'blocks/site';
 @import 'blocks/header';
 @import 'blocks/footer';
+@import 'blocks/form';
 @import 'blocks/button';
 @import 'blocks/list';
 @import 'blocks/quote';

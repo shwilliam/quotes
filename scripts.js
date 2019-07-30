@@ -28,11 +28,10 @@ jQuery(() => {
     e.preventDefault()
     submitQuote({
       title: $quoteAuthor.val(),
-      author: 0, // not used
       content: $quoteContent.val(),
       _qod_quote_source: $quoteSource.val(),
       _qod_quote_source_url: $quoteUrl.val(),
-      status: 'publish',
+      status: 'pending',
     })
   })
 })

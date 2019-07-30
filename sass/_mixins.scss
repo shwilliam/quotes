@@ -1,0 +1,10 @@
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+
+@mixin input {
+  background-color: transparent;
+  color: $color__link;
+  border: 2px solid $color__link;
+  border-radius: 3px;
+}
