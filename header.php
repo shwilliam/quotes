@@ -19,7 +19,7 @@
 
   <body <?php body_class(); ?>>
     <a class="skip-link screen-reader-text" href="#content">
-      <?php echo esc_html('Skip to content'); ?>
+      Skip to content
     </a>
 
     <header class="header" role="banner">

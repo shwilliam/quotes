@@ -11,13 +11,13 @@ get_header(); ?>
 
   <?php if (have_posts()) :
 
-    while ( have_posts() ) : the_post();
+    while (have_posts()) : the_post();
 
       get_template_part('template-parts/content', 'quote');
 
     endwhile;
 
-    the_posts_navigation();
+    qod_numbered_pagination();
 
   else :
 
