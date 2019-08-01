@@ -104,8 +104,10 @@ add_action('wp_enqueue_scripts', 'quotes_scripts');
 function modify_query_amount($query) {
   if (is_search()) {
     $query->set('posts_per_page', '10');
-  } else {
+  } else if (is_archive()) {
     $query->set('posts_per_page', '5');
+  } else {
+    $query->set('posts_per_page', '-1');
   }
 }
 
