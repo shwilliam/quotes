@@ -2,20 +2,28 @@
 # Typography
 --------------------------------------------------------------*/
 
-/* Inputs */
-
+html,
 body,
 button,
 input,
 select,
 textarea {
   color: $color__text;
-  font-family: $font__main;
-  font-size: 1rem;
+  font-family: $font__main, sans-serif;
+  font-size: $font-size__main;
+  font-weight: 300;
+  font-style: normal;
   line-height: $font__lh;
 }
 
-/* Links */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
 
 a {
   color: $color__link;

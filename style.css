@@ -30,6 +30,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*--------------------------------------------------------------
 # WordPress core
 -------------------------------------------------------------*/
+@import url(../fonts/stylesheet.css);
 .sticky {
   display: block; }
 
@@ -487,18 +488,27 @@ label > input {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-/* Inputs */
+html,
 body,
 button,
 input,
 select,
 textarea {
   color: #fff;
-  font-family: sans-serif;
-  font-size: 1rem;
+  font-family: "Exo", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
   line-height: 1.5; }
 
-/* Links */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500; }
+
 a {
   color: #00cc00;
   text-decoration: none; }

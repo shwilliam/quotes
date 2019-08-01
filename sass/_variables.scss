@@ -16,5 +16,6 @@ $color__link--visited: lighten($color__link, 10%);
 $color__link--hover: darken($color__link, 10%);
 
 // Type
-$font__main: sans-serif;
+$font__main: 'Exo';
+$font-size__main: 16px;
 $font__lh: 1.5;
