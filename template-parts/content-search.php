@@ -15,12 +15,11 @@
       </a>
     </h2>
 
-    <?php if ('post' === get_post_type()) :
-      the_excerpt();
-    endif; ?>
   </header>
 
   <div>
-    <?php the_excerpt(); ?>
+    <?php if ('post' === get_post_type()) :
+      the_excerpt();
+    endif; ?>
   </div>
 </article>
