@@ -18,8 +18,6 @@
   </header>
 
   <div>
-    <?php if ('post' === get_post_type()) :
-      the_excerpt();
-    endif; ?>
+    <?php the_excerpt(); ?>
   </div>
 </article>
