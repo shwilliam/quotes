@@ -30,7 +30,7 @@ get_header(); ?>
         <textarea
           name="quote__content"
           id="quote__content"
-          class="input"
+          class="input input--textarea"
           rows="3"
           required
         ></textarea>

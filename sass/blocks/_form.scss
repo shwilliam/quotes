@@ -6,6 +6,11 @@
   @include input;
   margin-top: $rhythm__base/3;
   margin-bottom: $rhythm__base/1.2;
+  width: 70%;
+}
+
+.input--textarea {
+  width: 100%;
 }
 
 .input--padded {
