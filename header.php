@@ -31,4 +31,4 @@
       </a>
     </header>
 
-    <main id="content">
+    <main id="content" class="site__main">

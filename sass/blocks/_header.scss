@@ -2,7 +2,35 @@
 # Header
 --------------------------------------------------------------*/
 
+.header {
+  position: relative;
+  font-family: 'FontAwesome';
+  color: $color__text--secondary;
+
+  @include desktop {
+    &:before {
+      content: '\f10d'; /* left quote */
+      font-size: 7rem;
+      position: absolute;
+      top: 9.5rem;
+      left: -8rem;
+    }
+
+    &:after {
+      content: '\f10e'; /* right quote */
+      font-size: 7rem;
+      position: absolute;
+      top: 9.5rem;
+      right: -8rem;
+    }
+  }
+}
+
 .header__logo {
-  width: 85%;
-  margin-top: $rhythm__base * 2;
+  width: 90%;
+  margin: $rhythm__base * 2 auto 0 auto;
+
+  @include desktop {
+    width: 100%;
+  }
 }

@@ -8,7 +8,15 @@
 
 .site__body {
   max-width: $max-width;
+  min-width: $min-width;
   margin: auto;
   padding-right: $rhythm__base / 2;
   padding-left: $rhythm__base / 2;
+}
+
+.site__main {
+  @include desktop {
+    padding-right: $rhythm__base / 2;
+    padding-left: $rhythm__base / 2;
+  }
 }

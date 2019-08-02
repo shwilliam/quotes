@@ -16,6 +16,17 @@
   }
 }
 
+.quote__button {
+  display: block;
+  margin-top: $rhythm__base * 1.5;
+  margin-bottom: $rhythm__base * 1.5;
+
+  @include desktop {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .quote__footer {
   margin: $rhythm__base/2 0 $rhythm__base 0;
   font-size: 0.9em;
