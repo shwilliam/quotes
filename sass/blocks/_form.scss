@@ -4,4 +4,12 @@
 
 .input {
   @include input;
+  margin-top: $rhythm__base/3;
+  margin-bottom: $rhythm__base/1.2;
+}
+
+.input--padded {
+  padding: 0.4rem 0.6rem;
+  margin-top: $rhythm__base;
+  margin-bottom: $rhythm__base * 3;
 }

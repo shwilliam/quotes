@@ -1,8 +1,7 @@
 /*--------------------------------------------------------------
-# Header
+# Modules 
 --------------------------------------------------------------*/
 
-.header__logo {
-  width: 85%;
-  margin-top: $rhythm__base * 2;
+.underline {
+  border-bottom: 1px dotted $color__text;
 }

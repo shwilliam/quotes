@@ -2,16 +2,25 @@
 # Footer
 --------------------------------------------------------------*/
 
+.footer {
+  font-size: $font-size__secondary;
+}
+
+.footer__nav-wrapper {
+  display: inline-block;
+  margin: $rhythm__base * 2 0 $rhythm__base/2 0;
+}
+
 .footer__nav {
   li {
     line-height: 1.2;
 
     &:not(:first-child) {
-      padding-left: $rhythm__base;
+      padding-left: $rhythm__base / 2;
     }
 
     &:not(:last-child) {
-      padding-right: $rhythm__base;
+      padding-right: $rhythm__base / 2;
       border-right: 1px solid $color__text;
     }
   }

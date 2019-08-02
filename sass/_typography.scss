@@ -25,6 +25,22 @@ h6 {
   font-weight: 500;
 }
 
+h1,
+h2 {
+  font-size: $font-size__title;
+  margin-top: $rhythm__base * 1.5;
+  margin-bottom: $rhythm__base;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: $font-size__subtitle;
+  margin-top: $rhythm__base;
+  margin-bottom: $rhythm__base/2;
+}
+
 a {
   color: $color__link;
   text-decoration: none;

@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 # Normalize
 # Variables
 # Mixins
+# Modules
 # Fonts
 # Typography
 # Blocks
@@ -26,6 +27,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   # Button
   # List
   # Quote
+  # Pagination
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # WordPress core
@@ -483,6 +485,12 @@ label > input {
 # Mixins
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Modules 
+--------------------------------------------------------------*/
+.underline {
+  border-bottom: 1px dotted #fff; }
+
+/*--------------------------------------------------------------
 # Fonts
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -496,7 +504,7 @@ select,
 textarea {
   color: #fff;
   font-family: "Exo", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
   font-style: normal;
   line-height: 1.5; }
@@ -508,6 +516,20 @@ h4,
 h5,
 h6 {
   font-weight: 500; }
+
+h1,
+h2 {
+  font-size: 2.3rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.5rem; }
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem; }
 
 a {
   color: #00cc00;
@@ -524,24 +546,38 @@ a {
 /*--------------------------------------------------------------
 # Site
 --------------------------------------------------------------*/
-body {
+.site {
   background-color: #222; }
+
+.site__body {
+  max-width: 1120px;
+  margin: auto;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .header__logo {
-  width: 85%; }
+  width: 85%;
+  margin-top: 3rem; }
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.footer {
+  font-size: 16px; }
+
+.footer__nav-wrapper {
+  display: inline-block;
+  margin: 3rem 0 0.75rem 0; }
+
 .footer__nav li {
   line-height: 1.2; }
   .footer__nav li:not(:first-child) {
-    padding-left: 1.5rem; }
+    padding-left: 0.75rem; }
   .footer__nav li:not(:last-child) {
-    padding-right: 1.5rem;
+    padding-right: 0.75rem;
     border-right: 1px solid #fff; }
 
 /*--------------------------------------------------------------
@@ -551,7 +587,22 @@ body {
   background-color: transparent;
   color: #00cc00;
   border: 2px solid #00cc00;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem; }
+  .input::-webkit-input-placeholder {
+    color: #ccc; }
+  .input::-moz-placeholder {
+    color: #ccc; }
+  .input::-ms-input-placeholder {
+    color: #ccc; }
+  .input::placeholder {
+    color: #ccc; }
+
+.input--padded {
+  padding: 0.4rem 0.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 4.5rem; }
 
 /*--------------------------------------------------------------
 # Button
@@ -561,11 +612,25 @@ body {
   color: #00cc00;
   border: 2px solid #00cc00;
   border-radius: 3px;
-  padding: 0.5rem 2.25rem;
+  font-weight: 500;
+  padding: 0.3rem 2.25rem;
+  margin: 0.3rem 0;
+  text-transform: capitalize;
   cursor: pointer; }
+  .button::-webkit-input-placeholder {
+    color: #ccc; }
+  .button::-moz-placeholder {
+    color: #ccc; }
+  .button::-ms-input-placeholder {
+    color: #ccc; }
+  .button::placeholder {
+    color: #ccc; }
   .button:hover, .button:active {
     color: #009900;
     border: 2px solid #009900; }
+
+.button--padded {
+  margin: 2.25rem 0; }
 
 .button--icon, .button--icon:hover, .button--icon:active {
   color: #00cc00;
@@ -592,7 +657,23 @@ body {
 /*--------------------------------------------------------------
 # Quote
 --------------------------------------------------------------*/
+.quote {
+  margin-top: 2.25rem; }
+
 .quote--bordered {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
   border-top: 1px dotted #fff; }
   .quote--bordered:last-of-type {
     border-bottom: 1px dotted #fff; }
+
+.quote__footer {
+  margin: 0.75rem 0 1.5rem 0; }
+
+/*--------------------------------------------------------------
+# Pagination
+--------------------------------------------------------------*/
+.pagination {
+  margin-top: 3rem; }
+  .pagination > * {
+    padding: 0 0.3rem; }

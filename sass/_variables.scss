@@ -4,12 +4,16 @@
 
 // Spacing
 $rhythm__base: 1.5rem;
+$max-width: 1120px;
+$max-width--desktop: 900px;
+$max-width--tablet: 500px;
 
 // Colors
 $color__bg: #222;
 
 $color__text: #fff;
 $color__text--secondary: #00cc00; // green
+$color__text--tertiary: #ccc;
 
 $color__link: $color__text--secondary;
 $color__link--visited: lighten($color__link, 10%);
@@ -17,5 +21,8 @@ $color__link--hover: darken($color__link, 10%);
 
 // Type
 $font__main: 'Exo';
-$font-size__main: 16px;
+$font-size__main: 20px;
+$font-size__secondary: 16px;
+$font-size__title: 2.3rem;
+$font-size__subtitle: 1.6rem;
 $font__lh: 1.5;

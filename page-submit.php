@@ -56,7 +56,7 @@ get_header(); ?>
         >
       </label>
 
-      <button class="button" type="submit">WOO</input>
+      <button class="button" type="submit">Submit quote</input>
     </form>
 
   <?php else : ?>

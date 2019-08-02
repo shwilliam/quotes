@@ -2,10 +2,20 @@
 # Quote
 --------------------------------------------------------------*/
 
+.quote {
+  margin-top: $rhythm__base * 1.5;
+}
+
 .quote--bordered {
+  margin-top: $rhythm__base;
+  padding-top: $rhythm__base;
   border-top: 1px dotted $color__text;
 
   &:last-of-type {
     border-bottom: 1px dotted $color__text;
   }
+}
+
+.quote__footer {
+  margin: $rhythm__base/2 0 $rhythm__base 0;
 }

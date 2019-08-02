@@ -9,7 +9,7 @@ get_header(); ?>
 
   <?php if (have_posts()) : ?>
 
-    <header>
+    <header class="underline">
       <h2>
         <?php printf(esc_html('Search Results for: %s'), '<span>'.get_search_query().'</span>'); ?>
       </h1>

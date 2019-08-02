@@ -9,7 +9,7 @@
 
     </main>
 
-    <footer role="contentinfo">
+    <footer class="footer" role="contentinfo">
       <nav role="navigation">
 
         <?php wp_nav_menu(array(

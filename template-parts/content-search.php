@@ -9,11 +9,11 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header>
-    <h2>
+    <h3>
       <a href="<?php esc_url(get_permalink()); ?>" rel="bookmark">
         <?php the_title(); ?>
       </a>
-    </h2>
+    </h3>
 
   </header>
 

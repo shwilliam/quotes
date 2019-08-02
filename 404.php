@@ -11,7 +11,7 @@ get_header(); ?>
 
   <section>
     <header>
-      <h2>Oops! That page can&rsquo;t be found.</h2>
+      <h2>Oops!</h2>
     </header>
 
     <div>

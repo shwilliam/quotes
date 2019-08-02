@@ -2,6 +2,13 @@
 # Site
 --------------------------------------------------------------*/
 
-body {
+.site {
   background-color: $color__bg;
+}
+
+.site__body {
+  max-width: $max-width;
+  margin: auto;
+  padding-right: $rhythm__base / 2;
+  padding-left: $rhythm__base / 2;
 }

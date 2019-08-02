@@ -20,7 +20,7 @@ function qod_numbered_pagination( $query_type = '' ) {
 
 	// Don't print empty markup if there's only one page.
 	if ( $the_query->max_num_pages > 1 ) :
-		echo '<nav role="navigation" class="number-pagination">';
+		echo '<nav role="navigation" class="pagination">';
 		echo paginate_links(
 			array(
 				'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
