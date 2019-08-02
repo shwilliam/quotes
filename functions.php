@@ -106,8 +106,6 @@ function modify_query_amount($query) {
     $query->set('posts_per_page', '10');
   } else if (is_archive()) {
     $query->set('posts_per_page', '5');
-  } else {
-    $query->set('posts_per_page', '-1');
   }
 }
 

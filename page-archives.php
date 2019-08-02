@@ -18,7 +18,9 @@ get_header(); ?>
 
     <ul class="list list--inline list--inline-padded">
       <?php
-        $posts = get_posts();
+        $posts = get_posts(array(
+          'posts_per_page' => '-1'
+        ));
         foreach ($posts as $post) : setup_postdata($post);
       ?>
 
