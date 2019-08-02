@@ -6,7 +6,7 @@
 $rhythm__base: 1.5rem;
 $max-width: 1120px;
 $max-width--desktop: 900px;
-$max-width--tablet: 500px;
+$max-width--tablet: 600px;
 
 // Colors
 $color__bg: #222;
@@ -22,6 +22,7 @@ $color__link--hover: darken($color__link, 10%);
 // Type
 $font__main: 'Exo';
 $font-size__main: 20px;
+$font-size__main--large: 25px;
 $font-size__secondary: 16px;
 $font-size__title: 2.3rem;
 $font-size__subtitle: 1.6rem;

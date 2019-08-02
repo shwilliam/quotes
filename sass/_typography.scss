@@ -14,6 +14,10 @@ textarea {
   font-weight: 300;
   font-style: normal;
   line-height: $font__lh;
+
+  @include tablet {
+    font-size: $font-size__main--large;
+  }
 }
 
 h1,

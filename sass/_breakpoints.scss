@@ -1,0 +1,15 @@
+/*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+
+@mixin tablet {
+  @media (min-width: #{$max-width--tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$max-width--desktop}) {
+    @content;
+  }
+}

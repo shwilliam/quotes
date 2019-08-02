@@ -16,6 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 # WordPress Core
 # Normalize
 # Variables
+# Breakpoints
 # Mixins
 # Modules
 # Fonts
@@ -34,6 +35,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'wp-core';
 @import 'normalize';
 @import 'variables';
+@import 'breakpoints';
 @import 'mixins';
 @import 'modules';
 @import 'fonts';

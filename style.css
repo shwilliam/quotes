@@ -15,6 +15,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 # WordPress Core
 # Normalize
 # Variables
+# Breakpoints
 # Mixins
 # Modules
 # Fonts
@@ -482,6 +483,9 @@ label > input {
 # Variables
 -------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Breakpoints
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # Mixins
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -508,6 +512,14 @@ textarea {
   font-weight: 300;
   font-style: normal;
   line-height: 1.5; }
+  @media (min-width: 600px) {
+    html,
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 25px; } }
 
 h1,
 h2,
@@ -566,11 +578,16 @@ a {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: 3rem 0 0.75rem 0; }
+  @media (min-width: 600px) {
+    .footer {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .footer__nav-wrapper {
-  display: inline-block;
-  margin: 3rem 0 0.75rem 0; }
+  display: inline-block; }
 
 .footer__nav li {
   line-height: 1.2; }
@@ -579,6 +596,14 @@ a {
   .footer__nav li:not(:last-child) {
     padding-right: 0.75rem;
     border-right: 1px solid #fff; }
+  @media (min-width: 600px) {
+    .footer__nav li:last-child {
+      padding-right: 0.75rem;
+      border-right: 1px solid #fff; } }
+
+@media (min-width: 600px) {
+  .footer__cite {
+    padding-left: 0.75rem; } }
 
 /*--------------------------------------------------------------
 # Form
@@ -668,7 +693,8 @@ a {
     border-bottom: 1px dotted #fff; }
 
 .quote__footer {
-  margin: 0.75rem 0 1.5rem 0; }
+  margin: 0.75rem 0 1.5rem 0;
+  font-size: 0.9em; }
 
 /*--------------------------------------------------------------
 # Pagination

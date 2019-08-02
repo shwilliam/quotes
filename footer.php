@@ -21,7 +21,7 @@
 
       </nav>
 
-      <p>
+      <p class="footer__cite">
         Made with
           <span role="img" aria-label="Heart">💚</span>
         by

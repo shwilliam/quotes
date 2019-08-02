@@ -4,11 +4,15 @@
 
 .footer {
   font-size: $font-size__secondary;
+  margin: $rhythm__base * 2 0 $rhythm__base/2 0;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .footer__nav-wrapper {
   display: inline-block;
-  margin: $rhythm__base * 2 0 $rhythm__base/2 0;
 }
 
 .footer__nav {
@@ -23,5 +27,18 @@
       padding-right: $rhythm__base / 2;
       border-right: 1px solid $color__text;
     }
+
+    @include tablet {
+      &:last-child {
+        padding-right: $rhythm__base / 2;
+        border-right: 1px solid $color__text;
+      }
+    }
+  }
+}
+
+.footer__cite {
+  @include tablet {
+    padding-left: $rhythm__base / 2;
   }
 }
