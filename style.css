@@ -748,6 +748,11 @@ a {
 .quote__cite {
   font-style: italic; }
 
+.quote__message {
+  font-size: 1.2em;
+  padding-top: 1.5rem;
+  padding-bottom: 0.75rem; }
+
 /*--------------------------------------------------------------
 # Pagination
 --------------------------------------------------------------*/

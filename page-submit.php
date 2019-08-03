@@ -56,7 +56,25 @@ get_header(); ?>
         >
       </label>
 
-      <button class="button" type="submit">Submit quote</input>
+      <button class="button" type="submit">Submit quote</button>
+
+      <div
+        id="quote__form-success-msg"
+        class="quote__message"
+        hidden
+      >
+        Thanks for making a submission! Your quote will be public after it has
+        been approved by our moderators.
+      </div>
+
+      <div
+        id="quote__form-error-msg"
+        class="quote__message"
+        hidden
+      >
+        Woops... Something went wrong. Try to reload the page and try again.
+      </div>
+
     </form>
 
   <?php else : ?>

@@ -2,6 +2,8 @@
 
 let $fetchBtn
 let $quoteForm
+let $quoteFormSuccess
+let $quoteFormError
 let $quoteAuthor
 let $quoteContent
 let $quoteSource
@@ -12,6 +14,8 @@ jQuery(() => {
   $activeQuote = jQuery('#quote-active')
   $fetchBtn = jQuery('#quote__fetch-btn')
   $quoteForm = jQuery('#quote__form')
+  $quoteFormSuccess = jQuery('#quote__form-success-msg')
+  $quoteFormError = jQuery('#quote__form-error-msg')
   $quoteAuthor = $quoteForm.find('#quote__author')
   $quoteContent = $quoteForm.find('#quote__content')
   $quoteSource = $quoteForm.find('#quote__source')
@@ -83,11 +87,13 @@ function submitQuote(payload) {
       beforeSend: xhr =>
         xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce),
     })
-    .success(res => {
-      // TODO: show success
-      console.log(res)
+    .success(() => {
+      $quoteFormSuccess.show()
+      $quoteFormError.hide()
     })
-    .fail(err => console.error(err)) // TODO: show err
+    .error(() => {
+      $quoteFormError.show()
+    })
 }
 
 // navigates to appropriate url on history navigation
