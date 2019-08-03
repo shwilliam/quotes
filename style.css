@@ -637,9 +637,12 @@ a {
       padding-right: 0.75rem;
       border-right: 1px solid #fff; } }
 
-@media (min-width: 600px) {
-  .footer__cite {
-    padding-left: 0.75rem; } }
+.footer__cite {
+  margin: 0.75rem 0 3rem 0; }
+  @media (min-width: 600px) {
+    .footer__cite {
+      margin: 0 0 3rem 0;
+      padding-left: 0.75rem; } }
 
 /*--------------------------------------------------------------
 # Form

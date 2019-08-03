@@ -44,7 +44,10 @@
 }
 
 .footer__cite {
+  margin: $rhythm__base/2 0 $rhythm__base * 2 0;
+
   @include tablet {
+    margin: 0 0 $rhythm__base * 2 0;
     padding-left: $rhythm__base / 2;
   }
 }
