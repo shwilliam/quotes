@@ -5,12 +5,14 @@
 .button {
   @include input;
 
-  font-weight: 500;
-  padding: $rhythm__base/5 $rhythm__base * 1.5;
   margin: $rhythm__base/5 0;
+  padding: $rhythm__base/5 $rhythm__base * 1.5;
+  color: $color__link;
+  font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
 
+  &:focus,
   &:hover,
   &:active {
     color: $color__link--hover;

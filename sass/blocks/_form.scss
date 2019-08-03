@@ -4,9 +4,16 @@
 
 .input {
   @include input;
+
+  color: $color__text;
   margin-top: $rhythm__base/3;
   margin-bottom: $rhythm__base/1.2;
+  padding: $rhythm__base/6 $rhythm__base/3;
   width: 70%;
+
+  &:focus {
+    border-color: $color__text;
+  }
 }
 
 .input--textarea {
