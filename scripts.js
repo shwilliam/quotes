@@ -61,15 +61,19 @@ function fetchRandomQuote() {
 
       $activeQuote.empty().append(
         `<p>${content.rendered}<p>
-        <footer>
+        <footer class="quote__footer">
           — ${title.rendered}
           ${
-            source
+            source && sourceUrl
               ? `, <cite class="quote__cite">
                 <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">
                   ${source}
                 </a>
               </cite>`
+              : source
+              ? `, <cite class="quote__cite">
+                  ${source}
+                </cite>`
               : ''
           }
         </footer>`,
