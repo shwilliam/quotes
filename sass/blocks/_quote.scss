@@ -4,6 +4,10 @@
 
 .quote {
   margin-top: $rhythm__base * 1.5;
+
+  @include desktop {
+    font-size: $font-size__main--x-large;
+  }
 }
 
 .quote--bordered {
@@ -29,7 +33,7 @@
 
 .quote__footer {
   margin: $rhythm__base/2 0 $rhythm__base 0;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .quote__cite {

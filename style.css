@@ -668,7 +668,7 @@ a {
     border-color: #fff; }
 
 .input--textarea {
-  width: 100%; }
+  width: 95%; }
 
 .input--padded {
   padding: 0.4rem 0.6rem;
@@ -727,6 +727,9 @@ a {
 --------------------------------------------------------------*/
 .quote {
   margin-top: 2.25rem; }
+  @media (min-width: 1400px) {
+    .quote {
+      font-size: 40px; } }
 
 .quote--bordered {
   margin-top: 1.5rem;
@@ -746,7 +749,7 @@ a {
 
 .quote__footer {
   margin: 0.75rem 0 1.5rem 0;
-  font-size: 0.9em; }
+  font-size: 0.8em; }
 
 .quote__cite {
   font-style: italic; }
