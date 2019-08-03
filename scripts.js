@@ -90,6 +90,10 @@ function submitQuote(payload) {
     .success(() => {
       $quoteFormSuccess.show()
       $quoteFormError.hide()
+      $quoteAuthor.val('')
+      $quoteContent.val('')
+      $quoteSource.val('')
+      $quoteUrl.val('')
     })
     .error(() => {
       $quoteFormError.show()
