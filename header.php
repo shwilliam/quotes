@@ -23,11 +23,11 @@
     </a>
 
     <header class="header" role="banner">
-      <h1 class="screen-reader-text">
-        <?php bloginfo('name'); ?>
-      </h1>
       <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-        <img class="header__logo" src="<?= get_stylesheet_directory_uri().'/images/logo.svg'; ?>"/>
+        <h1 class="screen-reader-text">
+          <?php bloginfo('name'); ?>
+        </h1>
+        <img alt="" class="header__logo" src="<?= get_stylesheet_directory_uri().'/images/logo.svg'; ?>"/>
       </a>
     </header>
 
