@@ -45,11 +45,28 @@ function fetchRandomQuote() {
     })
     .success(res => {
       const randQuote = res[0]
-      const {content, title, link} = randQuote
+      const {
+        content,
+        title,
+        link,
+        _qod_quote_source: source,
+        _qod_quote_source_url: sourceUrl,
+      } = randQuote
 
       $activeQuote.empty().append(
         `<p>${content.rendered}<p>
-        <footer>— ${title.rendered}</footer>`,
+        <footer>
+          — ${title.rendered}
+          ${
+            source
+              ? `, <cite class="quote__cite">
+                <a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">
+                  ${source}
+                </a>
+              </cite>`
+              : ''
+          }
+        </footer>`,
       )
 
       history.pushState({}, '', link)
