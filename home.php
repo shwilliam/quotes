@@ -7,6 +7,10 @@
 
 get_header(); ?>
 
+  <div id="quote__error-msg" class="quote__message" hidden>
+    Woops... Something went wrong. Try to reload the page and try again.
+  </div>
+
   <?php
     global $post;
 

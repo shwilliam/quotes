@@ -1,6 +1,7 @@
 /* global wp_vars */
 
 let $fetchBtn
+let $quoteError
 let $quoteForm
 let $quoteFormSuccess
 let $quoteFormError
@@ -12,6 +13,7 @@ let $activeQuote
 
 jQuery(() => {
   $activeQuote = jQuery('#quote-active')
+  $quoteError = jQuery('#quote__error-msg')
   $fetchBtn = jQuery('#quote__fetch-btn')
   $quoteForm = jQuery('#quote__form')
   $quoteFormSuccess = jQuery('#quote__form-success-msg')
@@ -75,7 +77,12 @@ function fetchRandomQuote() {
 
       history.pushState({}, '', link)
     })
-    .fail(err => console.error(err)) // TODO: show err
+    .success(() => {
+      $quoteError.hide()
+    })
+    .error(() => {
+      $quoteError.show()
+    })
 }
 
 function submitQuote(payload) {
