@@ -17,6 +17,11 @@
 - Move folder to `wp-content/themes` dir
 - Activate theme in the WP admin area
 
+## Sample content
+
+- [Download `quotes.sql`](https://gist.github.com/shwilliam/e7658f5e07956d5ba370ab372de2eb53)
+- Import the `.sql` file from within `phpmyadmin`
+
 ## Development
 
 - Clone repo
