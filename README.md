@@ -9,6 +9,7 @@
 - Mobile, tablet & desktop friendly
 - Uses WP rest API to avoid unecessary full-page reloads
 - Styled w/ SASS using the SCSS (Sassy CSS) syntax
+- Gulp for automated prefixing, minification w/ sourcemaps & BrowserSync
 - Easy to build upon!
 
 ## Installation
