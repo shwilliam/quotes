@@ -2,8 +2,8 @@
  * Skip link
  */
 
+// eslint-disable-next-line
 ;(function() {
-  // eslint-disable-line
   const isWebkit =
       navigator.userAgent.toLowerCase().indexOf('webkit') > -1,
     isOpera = navigator.userAgent.toLowerCase().indexOf('opera') > -1,

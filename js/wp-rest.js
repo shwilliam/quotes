@@ -74,8 +74,8 @@ function fetchRandomQuote() {
               </cite>`
               : source
               ? `, <cite class="quote__cite">
-                  ${source}
-                </cite>`
+                    ${source}
+                  </cite>`
               : ''
           }
         </footer>`,
