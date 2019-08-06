@@ -23,6 +23,7 @@ jQuery(() => {
   $quoteSource = $quoteForm.find('#quote__source')
   $quoteUrl = $quoteForm.find('#quote__url')
 
+  // force hard refresh on browser 'back'
   window.addEventListener('popstate', forceUpdate)
 
   $fetchBtn.on('click', e => {
@@ -59,6 +60,7 @@ function fetchRandomQuote() {
         _qod_quote_source_url: sourceUrl,
       } = randQuote
 
+      $quoteError.hide()
       $activeQuote.empty().append(
         `<p>${content.rendered}<p>
         <footer class="quote__footer">
@@ -80,9 +82,6 @@ function fetchRandomQuote() {
       )
 
       history.pushState({}, '', link)
-    })
-    .success(() => {
-      $quoteError.hide()
     })
     .error(() => {
       $quoteError.show()
