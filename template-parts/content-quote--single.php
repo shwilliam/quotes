@@ -17,7 +17,7 @@
       $quoteSource = $quoteMeta['_qod_quote_source'][0];
       $quoteSourceUrl = $quoteMeta['_qod_quote_source_url'][0]; 
 
-      if ($quoteSource & $quoteSourceUrl) :
+      if (isset($quoteSource, $quoteSourceUrl)) :
     ?>
 
       , <cite class="quote__cite">

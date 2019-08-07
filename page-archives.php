@@ -34,7 +34,8 @@ get_header(); ?>
     </section>
   <?php endif; ?>
 
-  <?php if (wp_count_posts() > 0) : ?>
+  <!-- if posts exist, assume at least one category exists -->
+  <?php if (wp_count_posts()) : ?>
     <section>
       <h3>Categories</h3>
 
