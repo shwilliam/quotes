@@ -19,4 +19,8 @@
     padding-right: $rhythm__base / 2;
     padding-left: $rhythm__base / 2;
   }
+
+  p + p {
+    margin-top: $rhythm__base/2;
+  }
 }
