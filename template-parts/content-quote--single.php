@@ -14,8 +14,8 @@
     — <?php the_title(); ?>
     <?php
       $quoteMeta = get_post_meta(get_the_ID()); 
-      $quoteSource = $quoteMeta['_qod_quote_source'][0];
-      $quoteSourceUrl = $quoteMeta['_qod_quote_source_url'][0]; 
+      $quoteSource = isset($quoteMeta['_qod_quote_source']) ? $quoteMeta['_qod_quote_source'][0] : null;
+      $quoteSourceUrl = isset($quoteMeta['_qod_quote_source_url']) ? $quoteMeta['_qod_quote_source_url'][0] : null; 
 
       if (isset($quoteSource, $quoteSourceUrl)) :
     ?>
