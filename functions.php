@@ -73,7 +73,7 @@ add_action('wp_enqueue_scripts', 'quotes_scripts');
 
 function qod_styles() {
   wp_enqueue_style('qod-style', get_stylesheet_uri());
-  wp_enqueue_style('font-awesome', 'https://unpkg.com/browse/font-awesome@4.7.0/css/font-awesome.min.css');
+  wp_enqueue_style('font-awesome', 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css');
 }
 add_action('wp_enqueue_scripts', 'qod_styles');
 
