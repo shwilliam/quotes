@@ -23,6 +23,8 @@
 - [Download `quotes.sql`](https://gist.github.com/shwilliam/e7658f5e07956d5ba370ab372de2eb53)
 - Import the `.sql` file from within `phpmyadmin`
 
+Note that this uses the URL `//localhost/quotes` and site path `/Applications/htdocs/quotes` so you must either mimic these or run your own find & replace to match your appropriate system paths.
+
 ## Development
 
 - Clone repo
