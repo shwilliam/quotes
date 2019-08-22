@@ -1,27 +1,17 @@
 /* global wp_vars */
 
-let $fetchBtn
-let $quoteError
-let $quoteForm
-let $quoteFormSuccess
-let $quoteFormError
-let $quoteAuthor
-let $quoteContent
-let $quoteSource
-let $quoteUrl
-let $activeQuote
-
-jQuery(() => {
-  $activeQuote = jQuery('#quote-active')
-  $quoteError = jQuery('#quote__error-msg')
-  $fetchBtn = jQuery('#quote__fetch-btn')
-  $quoteForm = jQuery('#quote__form')
-  $quoteFormSuccess = jQuery('#quote__form-success-msg')
-  $quoteFormError = jQuery('#quote__form-error-msg')
-  $quoteAuthor = $quoteForm.find('#quote__author')
-  $quoteContent = $quoteForm.find('#quote__content')
-  $quoteSource = $quoteForm.find('#quote__source')
-  $quoteUrl = $quoteForm.find('#quote__url')
+// eslint-disable-next-line
+;(() => {
+  const $activeQuote = jQuery('#quote-active')
+  const $quoteError = jQuery('#quote__error-msg')
+  const $fetchBtn = jQuery('#quote__fetch-btn')
+  const $quoteForm = jQuery('#quote__form')
+  const $quoteFormSuccess = jQuery('#quote__form-success-msg')
+  const $quoteFormError = jQuery('#quote__form-error-msg')
+  const $quoteAuthor = $quoteForm.find('#quote__author')
+  const $quoteContent = $quoteForm.find('#quote__content')
+  const $quoteSource = $quoteForm.find('#quote__source')
+  const $quoteUrl = $quoteForm.find('#quote__url')
 
   // force hard refresh on browser 'back'
   window.addEventListener('popstate', forceUpdate)
@@ -41,28 +31,27 @@ jQuery(() => {
       status: 'pending',
     })
   })
-})
 
-function fetchRandomQuote() {
-  return jQuery
-    .ajax({
-      url: `${wp_vars.rest_url}posts?filter[orderby]=rand&filter[posts_per_page]=1`,
-      beforeSend: xhr =>
-        xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce),
-    })
-    .success(res => {
-      const randQuote = res[0]
-      const {
-        content,
-        title,
-        link,
-        _qod_quote_source: source,
-        _qod_quote_source_url: sourceUrl,
-      } = randQuote
+  function fetchRandomQuote() {
+    return jQuery
+      .ajax({
+        url: `${wp_vars.rest_url}posts?filter[orderby]=rand&filter[posts_per_page]=1`,
+        beforeSend: xhr =>
+          xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce),
+      })
+      .success(res => {
+        const randQuote = res[0]
+        const {
+          content,
+          title,
+          link,
+          _qod_quote_source: source,
+          _qod_quote_source_url: sourceUrl,
+        } = randQuote
 
-      $quoteError.hide()
-      $activeQuote.empty().append(
-        `<p>${content.rendered}<p>
+        $quoteError.hide()
+        $activeQuote.empty().append(
+          `<p>${content.rendered}<p>
         <footer class="quote__footer">
           — ${title.rendered}
           ${
@@ -79,38 +68,39 @@ function fetchRandomQuote() {
               : ''
           }
         </footer>`,
-      )
+        )
 
-      history.pushState({}, '', link)
-    })
-    .error(() => {
-      $quoteError.show()
-    })
-}
+        history.pushState({}, '', link)
+      })
+      .error(() => {
+        $quoteError.show()
+      })
+  }
 
-function submitQuote(payload) {
-  return jQuery
-    .ajax({
-      url: `${wp_vars.rest_url}posts`,
-      method: 'POST',
-      data: payload,
-      beforeSend: xhr =>
-        xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce),
-    })
-    .success(() => {
-      $quoteFormSuccess.show()
-      $quoteFormError.hide()
-      $quoteAuthor.val('')
-      $quoteContent.val('')
-      $quoteSource.val('')
-      $quoteUrl.val('')
-    })
-    .error(() => {
-      $quoteFormError.show()
-    })
-}
+  function submitQuote(payload) {
+    return jQuery
+      .ajax({
+        url: `${wp_vars.rest_url}posts`,
+        method: 'POST',
+        data: payload,
+        beforeSend: xhr =>
+          xhr.setRequestHeader('X-WP-Nonce', wp_vars.wpapi_nonce),
+      })
+      .success(() => {
+        $quoteFormSuccess.show()
+        $quoteFormError.hide()
+        $quoteAuthor.val('')
+        $quoteContent.val('')
+        $quoteSource.val('')
+        $quoteUrl.val('')
+      })
+      .error(() => {
+        $quoteFormError.show()
+      })
+  }
 
-// navigates to appropriate url on history navigation
-function forceUpdate() {
-  window.location = window.location // eslint-disable-line
-}
+  // navigates to appropriate url on history navigation
+  function forceUpdate() {
+    window.location = window.location // eslint-disable-line
+  }
+})()
