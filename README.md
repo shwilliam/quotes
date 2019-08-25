@@ -2,6 +2,8 @@
 
 > An opinionated WP theme for a quote-centered site
 
+<img width="1440" alt="Theme screengrab" src="https://user-images.githubusercontent.com/38357771/63648210-2ad42c00-c6e1-11e9-8ce6-8335c983eab1.png">
+
 **Note**: You may get a security-related error in your browser when using the 'Show me another!' button to fetch another random quote. This often occurs when using the Browsersync's proxied server and can simply be avoided by visiting the original, locally-served site, for example visit `http://localhost/your-site` as opposed to `http://localhost:3000/your-site`.
 
 ## Features
